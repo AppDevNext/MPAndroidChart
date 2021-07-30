@@ -1,0 +1,5 @@
+jdk:
+ - openjdk11
+install:
+ - ./gradlew :MPChartExample:build :MPChartExample:publishToMavenLocal -x :MPChartExample:test
+ - find . -name "*.aar"
