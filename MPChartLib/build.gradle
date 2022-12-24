@@ -3,6 +3,8 @@ plugins {
     id 'maven-publish'
 }
 
+apply from: '../publishMavenCentral.gradle'
+
 // 2. Declare library details
 ext {
     mGroupId = "info.appdevnext"
