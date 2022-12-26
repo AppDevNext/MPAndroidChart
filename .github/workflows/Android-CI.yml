@@ -19,8 +19,6 @@ jobs:
         with:
           fetch-depth: 0
           submodules: true
-      - name: prepare
-        run: brew install exiftool imagemagick
       - name: Install JDK ${{ matrix.java_version }}
         uses: actions/setup-java@v3
         with:
