@@ -43,6 +43,7 @@ class StartTest {
 
     @Test
     fun smokeTestSimplyStart() {
+        Thread.sleep(500)
         Espresso.onView(ViewMatchers.isRoot())
                 .captureToBitmap()
                 .writeToTestStorage("${javaClass.simpleName}_${nameRule.methodName}")
@@ -55,6 +56,7 @@ class StartTest {
                         .inAdapterView(allOf(withId(R.id.listView1), isCompletelyDisplayed()))
                         .atPosition(index).perform(click())
 
+                Thread.sleep(500)
                 Espresso.onView(ViewMatchers.isRoot())
                         .captureToBitmap()
                         .writeToTestStorage("${javaClass.simpleName}_${nameRule.methodName}-${index}-${it.simpleName}")
