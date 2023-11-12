@@ -40,7 +40,7 @@ jobs:
         uses: hannesa2/action-android/emulator-run-cmd@0.1.16.7
         with:
           cmd: ./gradlew cAT --continue
-          api: 33
+          api: 34
           tag: default
           abi: x86_64
           cmdOptions: -noaudio -no-boot-anim -no-window -metrics-collection
