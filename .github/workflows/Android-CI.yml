@@ -18,10 +18,10 @@ jobs:
       fail-fast: false
       matrix:
         os: [ ubuntu-latest ]
-        api: [ 28 ]
-        tag: [ default ]
+        api: [ 33 ]
+        tag: [ default, google_apis ]
         abi: [ x86_64 ]
-        emulatorApi: [ 9 ]
+        emulatorApi: [ 13 ]
         java_version: [ 17 ]
     steps:
       - name: Checkout
