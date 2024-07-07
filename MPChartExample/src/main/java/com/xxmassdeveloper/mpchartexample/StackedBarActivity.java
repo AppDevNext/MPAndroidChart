@@ -1,10 +1,8 @@
 package com.xxmassdeveloper.mpchartexample;
 
 import android.Manifest;
-import android.content.Intent;
 import android.content.pm.PackageManager;
 import android.graphics.Color;
-import android.net.Uri;
 import android.os.Bundle;
 import androidx.core.content.ContextCompat;
 import android.util.Log;
@@ -37,7 +35,6 @@ import java.util.List;
 
 public class StackedBarActivity extends DemoBase implements OnSeekBarChangeListener, OnChartValueSelectedListener {
 
-    private static final int DEFAULT_VALUE = 12;
     private BarChart chart;
     private SeekBar seekBarX, seekBarY;
     private TextView tvX, tvY;
@@ -163,12 +160,6 @@ public class StackedBarActivity extends DemoBase implements OnSeekBarChangeListe
     public boolean onOptionsItemSelected(MenuItem item) {
 
         switch (item.getItemId()) {
-            case R.id.viewGithub: {
-                Intent i = new Intent(Intent.ACTION_VIEW);
-                i.setData(Uri.parse("https://github.com/AppDevNext/AndroidChart/blob/master/MPChartExample/src/main/java/com/xxmassdeveloper/mpchartexample/StackedBarActivity.java"));
-                startActivity(i);
-                break;
-            }
             case R.id.actionToggleValues: {
                 List<IBarDataSet> sets = chart.getData()
                         .getDataSets();

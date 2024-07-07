@@ -1,12 +1,8 @@
 
 package com.xxmassdeveloper.mpchartexample;
 
-import android.content.Intent;
 import android.graphics.Color;
-import android.net.Uri;
 import android.os.Bundle;
-import android.view.Menu;
-import android.view.MenuItem;
 import android.view.WindowManager;
 import android.widget.SeekBar;
 import android.widget.SeekBar.OnSeekBarChangeListener;
@@ -97,27 +93,6 @@ public class PerformanceLineChart extends DemoBase implements OnSeekBarChangeLis
         // get the legend (only possible after setting data)
         Legend l = chart.getLegend();
         l.setEnabled(false);
-    }
-
-    @Override
-    public boolean onCreateOptionsMenu(Menu menu) {
-        getMenuInflater().inflate(R.menu.only_github, menu);
-        return true;
-    }
-
-    @Override
-    public boolean onOptionsItemSelected(MenuItem item) {
-
-        switch (item.getItemId()) {
-            case R.id.viewGithub: {
-                Intent i = new Intent(Intent.ACTION_VIEW);
-                i.setData(Uri.parse("https://github.com/AppDevNext/AndroidChart/blob/master/MPChartExample/src/main/java/com/xxmassdeveloper/mpchartexample/PerformanceLineChart.java"));
-                startActivity(i);
-                break;
-            }
-        }
-
-        return true;
     }
 
     @Override

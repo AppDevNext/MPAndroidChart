@@ -44,11 +44,6 @@ class MainActivity : AppCompatActivity(), OnItemClickListener {
     override fun onOptionsItemSelected(item: MenuItem): Boolean {
         val i: Intent
         when (item.itemId) {
-            R.id.viewGithub -> {
-                i = Intent(Intent.ACTION_VIEW)
-                i.data = Uri.parse("https://github.com/AppDevNext/AndroidChart")
-                startActivity(i)
-            }
             R.id.report -> {
                 i = Intent(Intent.ACTION_SENDTO, Uri.fromParts(
                         "mailto", "philjay.librarysup@gmail.com", null))

@@ -131,13 +131,6 @@ class LineChartActivity1 : DemoBase(), OnSeekBarChangeListener, OnChartValueSele
 
     override fun onOptionsItemSelected(item: MenuItem): Boolean {
         when (item.itemId) {
-            R.id.viewGithub -> {
-                val i = Intent(Intent.ACTION_VIEW)
-                i.data =
-                    Uri.parse("https://github.com/AppDevNext/AndroidChart/blob/master/MPChartExample/src/main/java/com/xxmassdeveloper/mpchartexample/LineChartActivity1.java")
-                startActivity(i)
-            }
-
             R.id.actionToggleValues -> {
                 binding.chart1.data?.dataSets?.forEach {
                     val set = it as LineDataSet

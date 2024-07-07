@@ -1,7 +1,5 @@
 package com.xxmassdeveloper.mpchartexample.fragments
 
-import android.content.Intent
-import android.net.Uri
 import android.os.Bundle
 import android.view.*
 import android.widget.FrameLayout
@@ -46,22 +44,6 @@ class ViewPagerSimpleChartDemo : DemoBase() {
         override fun getCount(): Int {
             return 5
         }
-    }
-
-    override fun onCreateOptionsMenu(menu: Menu): Boolean {
-        menuInflater.inflate(R.menu.only_github, menu)
-        return true
-    }
-
-    override fun onOptionsItemSelected(item: MenuItem): Boolean {
-        when (item.itemId) {
-            R.id.viewGithub -> {
-                val i = Intent(Intent.ACTION_VIEW)
-                i.data = Uri.parse("https://github.com/AppDevNext/AndroidChart/blob/master/MPChartExample/src/main/java/com/xxmassdeveloper/mpchartexample/fragments/SimpleChartDemo.java")
-                startActivity(i)
-            }
-        }
-        return true
     }
 
     /* Intentionally left empty */

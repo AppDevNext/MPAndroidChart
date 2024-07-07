@@ -242,12 +242,6 @@ public class CombinedChartActivity extends DemoBase {
     @Override
     public boolean onOptionsItemSelected(MenuItem item) {
         switch (item.getItemId()) {
-            case R.id.viewGithub: {
-                Intent i = new Intent(Intent.ACTION_VIEW);
-                i.setData(Uri.parse("https://github.com/AppDevNext/AndroidChart/blob/master/MPChartExample/src/main/java/com/xxmassdeveloper/mpchartexample/CombinedChartActivity.java"));
-                startActivity(i);
-                break;
-            }
             case R.id.actionToggleLineValues: {
                 for (IDataSet set : chart.getData().getDataSets()) {
                     if (set instanceof LineDataSet)

@@ -2,10 +2,8 @@
 package com.xxmassdeveloper.mpchartexample;
 
 import android.Manifest;
-import android.content.Intent;
 import android.content.pm.PackageManager;
 import android.graphics.Color;
-import android.net.Uri;
 import android.os.Bundle;
 import androidx.core.content.ContextCompat;
 import android.util.Log;
@@ -140,12 +138,6 @@ public class StackedBarActivityNegative extends DemoBase implements
     public boolean onOptionsItemSelected(MenuItem item) {
 
         switch (item.getItemId()) {
-            case R.id.viewGithub: {
-                Intent i = new Intent(Intent.ACTION_VIEW);
-                i.setData(Uri.parse("https://github.com/AppDevNext/AndroidChart/blob/master/MPChartExample/src/main/java/com/xxmassdeveloper/mpchartexample/StackedBarActivityNegative.java"));
-                startActivity(i);
-                break;
-            }
             case R.id.actionToggleValues: {
                 List<IBarDataSet> sets = chart.getData()
                         .getDataSets();

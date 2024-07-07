@@ -1,11 +1,7 @@
 
 package com.xxmassdeveloper.mpchartexample;
 
-import android.content.Intent;
-import android.net.Uri;
 import android.os.Bundle;
-import android.view.Menu;
-import android.view.MenuItem;
 import android.view.WindowManager;
 
 import com.github.mikephil.charting.charts.BarChart;
@@ -73,27 +69,6 @@ public class ScrollViewActivity extends DemoBase {
         chart.setData(data);
         chart.invalidate();
         chart.animateY(800);
-    }
-
-    @Override
-    public boolean onCreateOptionsMenu(Menu menu) {
-        getMenuInflater().inflate(R.menu.only_github, menu);
-        return true;
-    }
-
-    @Override
-    public boolean onOptionsItemSelected(MenuItem item) {
-
-        switch (item.getItemId()) {
-            case R.id.viewGithub: {
-                Intent i = new Intent(Intent.ACTION_VIEW);
-                i.setData(Uri.parse("https://github.com/AppDevNext/AndroidChart/blob/master/MPChartExample/src/main/java/com/xxmassdeveloper/mpchartexample/ScrollViewActivity.java"));
-                startActivity(i);
-                break;
-            }
-        }
-
-        return true;
     }
 
     @Override

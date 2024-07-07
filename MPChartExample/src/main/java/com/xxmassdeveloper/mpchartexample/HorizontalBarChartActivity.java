@@ -164,12 +164,6 @@ public class HorizontalBarChartActivity extends DemoBase implements OnSeekBarCha
     public boolean onOptionsItemSelected(MenuItem item) {
 
         switch (item.getItemId()) {
-            case R.id.viewGithub: {
-                Intent i = new Intent(Intent.ACTION_VIEW);
-                i.setData(Uri.parse("https://github.com/AppDevNext/AndroidChart/blob/master/MPChartExample/src/main/java/com/xxmassdeveloper/mpchartexample/HorizontalBarChartActivity.java"));
-                startActivity(i);
-                break;
-            }
             case R.id.actionToggleValues: {
                 List<IBarDataSet> sets = chart.getData()
                         .getDataSets();

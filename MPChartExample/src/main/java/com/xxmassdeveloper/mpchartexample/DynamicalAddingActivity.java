@@ -196,12 +196,6 @@ public class DynamicalAddingActivity extends DemoBase implements OnChartValueSel
     public boolean onOptionsItemSelected(MenuItem item) {
 
         switch (item.getItemId()) {
-            case R.id.viewGithub: {
-                Intent i = new Intent(Intent.ACTION_VIEW);
-                i.setData(Uri.parse("https://github.com/AppDevNext/AndroidChart/blob/master/MPChartExample/src/main/java/com/xxmassdeveloper/mpchartexample/DynamicalAddingActivity.java"));
-                startActivity(i);
-                break;
-            }
             case R.id.actionAddEntry: {
                 addEntry();
                 Toast.makeText(this, "Entry added!", Toast.LENGTH_SHORT).show();

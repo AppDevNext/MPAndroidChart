@@ -2,11 +2,9 @@
 package com.xxmassdeveloper.mpchartexample;
 
 import android.Manifest;
-import android.content.Intent;
 import android.content.pm.PackageManager;
 import android.graphics.Color;
 import android.graphics.Typeface;
-import android.net.Uri;
 import android.os.Bundle;
 import android.text.SpannableString;
 import android.text.style.ForegroundColorSpan;
@@ -190,12 +188,6 @@ public class PieChartRoundedActivity extends DemoBase implements OnSeekBarChange
     public boolean onOptionsItemSelected(MenuItem item) {
 
         switch (item.getItemId()) {
-            case R.id.viewGithub: {
-                Intent i = new Intent(Intent.ACTION_VIEW);
-                i.setData(Uri.parse("https://github.com/AppDevNext/AndroidChart/blob/master/MPChartExample/src/main/java/com/xxmassdeveloper/mpchartexample/PieChartActivity.java"));
-                startActivity(i);
-                break;
-            }
             case R.id.actionToggleValues: {
                 for (IDataSet<?> set : chart.getData().getDataSets())
                     set.setDrawValues(!set.isDrawValuesEnabled());

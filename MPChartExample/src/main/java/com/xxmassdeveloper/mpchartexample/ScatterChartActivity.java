@@ -2,9 +2,7 @@
 package com.xxmassdeveloper.mpchartexample;
 
 import android.Manifest;
-import android.content.Intent;
 import android.content.pm.PackageManager;
-import android.net.Uri;
 import android.os.Bundle;
 import androidx.core.content.ContextCompat;
 import android.util.Log;
@@ -160,12 +158,6 @@ public class ScatterChartActivity extends DemoBase implements OnSeekBarChangeLis
     public boolean onOptionsItemSelected(MenuItem item) {
 
         switch (item.getItemId()) {
-            case R.id.viewGithub: {
-                Intent i = new Intent(Intent.ACTION_VIEW);
-                i.setData(Uri.parse("https://github.com/AppDevNext/AndroidChart/blob/master/MPChartExample/src/main/java/com/xxmassdeveloper/mpchartexample/ScatterChartActivity.java"));
-                startActivity(i);
-                break;
-            }
             case R.id.actionToggleValues: {
                 List<IScatterDataSet> sets = chart.getData()
                         .getDataSets();

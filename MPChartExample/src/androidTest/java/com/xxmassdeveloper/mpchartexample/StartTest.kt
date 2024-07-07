@@ -62,13 +62,17 @@ class StartTest {
 
                 Intents.intended(hasComponent(it.name))
 
-                openActionBarOverflowOrOptionsMenu(getInstrumentation().targetContext)
-                Thread.sleep(100)
-                takeScreenshot()
-                    .writeToTestStorage("${javaClass.simpleName}_${nameRule.methodName}-${index}-${it.simpleName} menu")
-                Espresso.pressBack()
-                Thread.sleep(100)
-                Espresso.pressBack()
+                try {
+                    openActionBarOverflowOrOptionsMenu(getInstrumentation().targetContext)
+                    Thread.sleep(100)
+                    takeScreenshot()
+                        .writeToTestStorage("${javaClass.simpleName}_${nameRule.methodName}-${index}-${it.simpleName} menu")
+                    Espresso.pressBack()
+                    Thread.sleep(100)
+                    Espresso.pressBack()
+                } catch (e: Exception) {
+                    Log.w(nameRule.methodName, "${index}-${it.simpleName} no pressBack necessary")
+                }
             }
         }
     }

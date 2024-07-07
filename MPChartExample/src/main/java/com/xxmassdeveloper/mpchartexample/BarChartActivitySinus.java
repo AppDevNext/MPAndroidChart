@@ -150,12 +150,6 @@ public class BarChartActivitySinus extends DemoBase implements OnSeekBarChangeLi
     public boolean onOptionsItemSelected(MenuItem item) {
 
         switch (item.getItemId()) {
-            case R.id.viewGithub: {
-                Intent i = new Intent(Intent.ACTION_VIEW);
-                i.setData(Uri.parse("https://github.com/AppDevNext/AndroidChart/blob/master/MPChartExample/src/main/java/com/xxmassdeveloper/mpchartexample/BarChartActivitySinus.java"));
-                startActivity(i);
-                break;
-            }
             case R.id.actionToggleValues: {
                 for (IBarDataSet set : chart.getData().getDataSets())
                     set.setDrawValues(!set.isDrawValuesEnabled());

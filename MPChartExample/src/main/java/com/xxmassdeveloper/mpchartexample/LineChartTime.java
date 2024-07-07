@@ -172,12 +172,6 @@ public class LineChartTime extends DemoBase implements OnSeekBarChangeListener {
     public boolean onOptionsItemSelected(MenuItem item) {
 
         switch (item.getItemId()) {
-            case R.id.viewGithub: {
-                Intent i = new Intent(Intent.ACTION_VIEW);
-                i.setData(Uri.parse("https://github.com/AppDevNext/AndroidChart/blob/master/MPChartExample/src/main/java/com/xxmassdeveloper/mpchartexample/LineChartTime.java"));
-                startActivity(i);
-                break;
-            }
             case R.id.actionToggleValues: {
                 List<ILineDataSet> sets = chart.getData()
                         .getDataSets();

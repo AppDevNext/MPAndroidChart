@@ -231,12 +231,6 @@ public class LineChartDualAxisActivity extends DemoBase implements OnSeekBarChan
     public boolean onOptionsItemSelected(MenuItem item) {
 
         switch (item.getItemId()) {
-            case R.id.viewGithub: {
-                Intent i = new Intent(Intent.ACTION_VIEW);
-                i.setData(Uri.parse("https://github.com/AppDevNext/AndroidChart/blob/master/MPChartExample/src/main/java/com/xxmassdeveloper/mpchartexample/LineChartActivity2.java"));
-                startActivity(i);
-                break;
-            }
             case R.id.actionToggleValues: {
                 List<ILineDataSet> sets = chart.getData()
                         .getDataSets();

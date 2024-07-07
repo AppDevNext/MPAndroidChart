@@ -157,26 +157,5 @@ public class ListViewBarChartActivity extends DemoBase {
     }
 
     @Override
-    public boolean onCreateOptionsMenu(Menu menu) {
-        getMenuInflater().inflate(R.menu.only_github, menu);
-        return true;
-    }
-
-    @Override
-    public boolean onOptionsItemSelected(MenuItem item) {
-
-        switch (item.getItemId()) {
-            case R.id.viewGithub: {
-                Intent i = new Intent(Intent.ACTION_VIEW);
-                i.setData(Uri.parse("https://github.com/AppDevNext/AndroidChart/blob/master/MPChartExample/src/main/java/com/xxmassdeveloper/mpchartexample/ListViewBarChartActivity.java"));
-                startActivity(i);
-                break;
-            }
-        }
-
-        return true;
-    }
-
-    @Override
     public void saveToGallery() { /* Intentionally left empty */ }
 }
