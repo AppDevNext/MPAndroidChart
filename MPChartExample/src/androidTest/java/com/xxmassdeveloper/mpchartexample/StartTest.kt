@@ -74,7 +74,7 @@ class StartTest {
                     optionMenus.filter { plain -> Character.isDigit(plain.first()) }.forEach { filteredTitle ->
                         optionMenu = "$index->$filteredTitle"
                         openActionBarOverflowOrOptionsMenu(getInstrumentation().targetContext)
-                        Thread.sleep(100)
+                        Thread.sleep(10)
                         screenshotOfOptionMenu("${javaClass.simpleName}_${nameRule.methodName}-${index}-${it.simpleName}-${contentItem.name}", filteredTitle)
                     }
 
@@ -92,7 +92,7 @@ class StartTest {
 
     private fun screenshotOfOptionMenu(simpleName: String, menuTitle: String) {
         onView(withText(menuTitle)).perform(click())
-        Thread.sleep(100)
+        Thread.sleep(10)
         Log.d(nameRule.methodName, "screenshotOfOptionMenu ${menuTitle}-${simpleName}")
         takeScreenshot()
             .writeToTestStorage("${simpleName}-2menu-click-$menuTitle")
