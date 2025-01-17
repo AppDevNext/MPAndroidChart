@@ -17,10 +17,10 @@ jobs:
     strategy:
       fail-fast: false
       matrix:
-        os: [ ubuntu-22.04 ]
+        os: [ ubuntu-24.04-arm ]
         api: [ 28 ]
         tag: [ default ]
-        abi: [ x86_64 ]
+        abi: [ arm64 ]
         emulatorApi: [ 9 ]
         java_version: [ 17 ]
     steps:
